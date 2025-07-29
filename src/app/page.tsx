@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { FaMapMarkerAlt, FaHome, FaMoneyBillWave, FaSearch, FaHeart, FaShareAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaHome, FaHeart, FaShareAlt } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 interface Ilan {
@@ -494,7 +494,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
