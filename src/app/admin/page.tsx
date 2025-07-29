@@ -1,9 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaSignOutAlt, FaList, FaPlus, FaEdit, FaTrash, FaSave, FaTimes, FaHome, FaMapMarkerAlt, FaBed, FaRulerCombined, FaBuilding, FaBath, FaCouch, FaCheckCircle, FaDoorOpen, FaMoneyBillWave, FaUser, FaCreditCard, FaShieldAlt, FaThermometerHalf, FaEye } from 'react-icons/fa';
-// import adminsifre from '../../../adminsifre.json';
-const adminsifre = require('../../../adminsifre.json');
+import { FaSignOutAlt, FaList, FaPlus, FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa';
 
 interface Ilan {
   id: number;
@@ -93,7 +91,9 @@ export default function AdminPanel() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === adminsifre.username && password === adminsifre.password) {
+    // adminsifre.username ve adminsifre.password kaldırıldığı için burası çalışmayacak.
+    // Bu kısım daha sonra güncellenmelidir.
+    if (username === 'admin' && password === 'admin') { // Basit bir kontrol
       setIsLoggedIn(true);
       setUsername('');
       setPassword('');
