@@ -41,7 +41,6 @@ export default function IlanDetay() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [selectedImage, setSelectedImage] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
   const [activeTab, setActiveTab] = useState('Detaylar');
   const TABS: { label: string; key: string }[] = [
     { label: 'Detaylar', key: 'Detaylar' },
@@ -239,9 +238,6 @@ export default function IlanDetay() {
                 <a href="https://wa.me/905265128629" target="_blank" rel="noopener" className="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-xl font-bold text-lg shadow flex items-center justify-center gap-2 mb-2">WhatsApp <FaWhatsapp /></a>
                 <a href={(() => {
                   // Krediyle ilgili blog id'sini bul
-                  const krediBlog = tumIlanlar && Array.isArray(tumIlanlar) && tumIlanlar.length > 0 ? null : null;
-                  // Eğer bloglar globalde varsa, burada import et ve id'sini bul
-                  // Örnek: krediyle ilgili blog id'si 5 ise
                   return "/blog/5";
                 })()} className="block text-blue-700 text-sm font-bold text-center underline mb-2">Kredi kullanım koşulları için tıklayınız</a>
                 {/* Alt rozetler - emlakçıya uygun */}
