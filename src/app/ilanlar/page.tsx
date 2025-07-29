@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaHeart, FaMapMarkerAlt, FaBed, FaRulerCombined, FaBuilding, FaBath, FaHome, FaPhone, FaWhatsapp, FaShareAlt, FaSearch, FaFilter } from "react-icons/fa";
+import { FaHeart, FaMapMarkerAlt, FaBed, FaRulerCombined, FaBuilding, FaBath, FaPhone, FaWhatsapp, FaShareAlt, FaFilter } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 interface Ilan {
@@ -49,7 +49,6 @@ export default function IlanlarPage() {
   const [adres, setAdres] = useState("");
   const [arama, setArama] = useState("");
   const [favoriler, setFavoriler] = useState<number[]>([]);
-  const [showMap, setShowMap] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [activeTab, setActiveTab] = useState('Tümü'); // Tematik sekme state'i
   
